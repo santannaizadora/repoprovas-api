@@ -89,3 +89,31 @@ ALTER TABLE "tests" ADD CONSTRAINT "tests_categoryId_fkey" FOREIGN KEY ("categor
 
 -- AddForeignKey
 ALTER TABLE "tests" ADD CONSTRAINT "tests_teacherDisciplineId_fkey" FOREIGN KEY ("teacherDisciplineId") REFERENCES "teachersDisciplines"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+INSERT INTO terms ("number") VALUES (1);
+INSERT INTO terms ("number") VALUES (2);
+INSERT INTO terms ("number") VALUES (3);
+INSERT INTO terms ("number") VALUES (4);
+INSERT INTO terms ("number") VALUES (5);
+INSERT INTO terms ("number") VALUES (6);
+
+INSERT INTO categories ("name") VALUES ('Projeto');
+INSERT INTO categories ("name") VALUES ('Prática');
+INSERT INTO categories ("name") VALUES ('Recuperação');
+
+INSERT INTO teachers ("name") VALUES ('Diego Pinho');
+INSERT INTO teachers ("name") VALUES ('Bruna Hamori');
+
+INSERT INTO disciplines ("name", "termId") VALUES ('HTML e CSS', 1);
+INSERT INTO disciplines ("name", "termId") VALUES ('JavaScript', 2);
+INSERT INTO disciplines ("name", "termId") VALUES ('React', 3);
+INSERT INTO disciplines ("name", "termId") VALUES ('Humildade', 1);
+INSERT INTO disciplines ("name", "termId") VALUES ('Planejamento', 2);
+INSERT INTO disciplines ("name", "termId") VALUES ('Autoconfiança', 3);
+
+INSERT INTO "teachersDisciplines" ("teacherId", "disciplineId") VALUES (1, 1);
+INSERT INTO "teachersDisciplines" ("teacherId", "disciplineId") VALUES (1, 2);
+INSERT INTO "teachersDisciplines" ("teacherId", "disciplineId") VALUES (1, 3); 
+INSERT INTO "teachersDisciplines" ("teacherId", "disciplineId") VALUES (2, 4);
+INSERT INTO "teachersDisciplines" ("teacherId", "disciplineId") VALUES (2, 5);
+INSERT INTO "teachersDisciplines" ("teacherId", "disciplineId") VALUES (2, 6);
